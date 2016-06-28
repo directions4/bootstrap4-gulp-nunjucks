@@ -1,0 +1,37 @@
+{% from 'templates/macros/global-macro.njk' import asset,path %}
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{sitename}}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{root}}css/app.css">
+  </head>
+  <body>
+    {% block header %}
+      {% include 'templates/partials/header.njk' %}
+    {% endblock header %}
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          {% include 'templates/partials/sidebar.njk' %}
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          {% block body %}
+            {% block content %}{% endblock content %}
+          {% endblock body %}
+        </div>
+      </div>
+    </div>
+
+    {% block footer %}
+      {% include 'templates/partials/footer.njk' %}
+    {% endblock footer %}
+
+    {% block javascripts %}
+      <script src="{{roo}}js/app.js"></script>
+    {% endblock %}
+  </body>
+</html>

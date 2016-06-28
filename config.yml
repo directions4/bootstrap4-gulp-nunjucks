@@ -1,0 +1,58 @@
+# Your project's server will run on localhost:xxxx at this port
+PORT: 8000
+
+# Autoprefixer will make sure your CSS works with these browsers
+COMPATIBILITY:
+  - "Chrome >= 35"
+  - "Firefox >= 31"
+  - "Edge >= 12"
+  - "Explorer >= 9"
+  - "iOS >= 8"
+  - "Safari >= 8"
+  - "Android 2.3"
+  - "Android >= 4"
+  - "Opera >= 12"
+
+# UnCSS will use these settings
+UNCSS_OPTIONS:
+  html:
+    - "src/**/*.html"
+  ignore:
+    - !!js/regexp .foundation-mq
+    - !!js/regexp ^\.is-.*
+
+# Gulp will reference these paths when it copies files
+PATHS:
+  # Path to dist folder
+  dist: "dist"
+  # Paths to static assets that aren't images, CSS, or JavaScript
+  assets:
+    - "src/assets/**/*"
+    - "!src/assets/{img,js,scss}/**/*"
+  # Paths to Sass libraries, which can then be loaded with @import
+  sass:
+    - "node_modules/bootstrap/scss"
+  #  - "node_modules/motion-ui/src"
+  # Paths to JavaScript libraries, which are compined into one file
+  javascript:
+    # Libraries requried by Bootstrap
+    - "node_modules/jquery/dist/jquery.js"
+    # Core Bootstrap files
+    - "node_modules/bootstrap/dist/js/bootstrap.js"
+    # Individual Bootstrap components
+    # If you aren't using a component, just remove it from the list
+    - "node_modules/bootstrap/dist/js/umd/util.js"
+    - "node_modules/bootstrap/dist/js/umd/alert.js"
+    - "node_modules/bootstrap/dist/js/umd/button.js"
+    - "node_modules/bootstrap/dist/js/umd/carousel.js"
+    - "node_modules/bootstrap/dist/js/umd/collapse.js"
+    - "node_modules/bootstrap/dist/js/umd/dropdown.js"
+    - "node_modules/bootstrap/dist/js/umd/modal.js"
+    - "node_modules/bootstrap/dist/js/umd/scrollspy.js"
+    - "node_modules/bootstrap/dist/js/umd/tab.js"
+    - "node_modules/bootstrap/dist/js/umd/tooltip.js"
+    - "node_modules/bootstrap/dist/js/umd/popover.js"
+
+    # Paths to your own project code are here
+    - "src/assets/js/!(app).js"
+    - "src/assets/js/app.js"
