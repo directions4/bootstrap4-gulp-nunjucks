@@ -35,8 +35,9 @@ PATHS:
   #  - "node_modules/motion-ui/src"
   # Paths to JavaScript libraries, which are compined into one file
   javascript:
-    # Libraries requried by Bootstrap
+    # Libraries requried by Bootstrap & tether
     - "node_modules/jquery/dist/jquery.js"
+    - "node_modules/tether/dist/js/tether.min.js"
     # Core Bootstrap files
     - "node_modules/bootstrap/dist/js/bootstrap.js"
     # Individual Bootstrap components
