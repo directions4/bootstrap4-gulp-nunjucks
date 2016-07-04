@@ -6,6 +6,7 @@ This is the front-end development kit for use with [Bootstrap 4](http://v4-alpha
 - Sass compilation and prefixing (with libsass)
 - Easy to make styleguides with Sherpa
 - JavaScript concatenation
+- Font Awesome
 - Built-in BrowserSync server
 - For production builds:
   - CSS compression
