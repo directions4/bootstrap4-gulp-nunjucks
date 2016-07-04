@@ -1,6 +1,6 @@
 {
   "name": "bootstrap4-gulp-nunjucks",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Template for Bootstrap 4.",
   "main": "gulpfile.js",
   "scripts": {
@@ -31,6 +31,7 @@
     "babel-register": "^6.7.2",
     "bootstrap": "^4.0.0-alpha.2",
     "browser-sync": "^2.13.0",
+    "font-awesome": "^4.6.3",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-babel": "^6.1.2",

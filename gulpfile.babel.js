@@ -36,7 +36,7 @@ function loadConfig() {
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
   //gulp.series(clean, gulp.parallel(pages, sass, javascript, images, copy), styleGuide)
-  gulp.series(clean, gulp.parallel(pages, sass, javascript), styleGuide)
+  gulp.series(clean, gulp.parallel(pages, sass, javascript, fonts), styleGuide)
 );
 
 // Build the site, run the server, and watch for file changes
@@ -128,6 +128,12 @@ function images() {
       progressive: true
     })))
     .pipe(gulp.dest(PATHS.dist + '/img'));
+}
+
+// font files
+function fonts() {
+  return gulp.src(PATHS.font)
+    .pipe(gulp.dest(PATHS.dist + '/fonts'));
 }
 
 // Start a server with BrowserSync to preview the site in

@@ -32,6 +32,7 @@ PATHS:
   # Paths to Sass libraries, which can then be loaded with @import
   sass:
     - "node_modules/bootstrap/scss"
+    - "node_modules/font-awesome/scss"
   #  - "node_modules/motion-ui/src"
   # Paths to JavaScript libraries, which are compined into one file
   javascript:
@@ -53,7 +54,13 @@ PATHS:
     - "node_modules/bootstrap/dist/js/umd/tab.js"
     - "node_modules/bootstrap/dist/js/umd/tooltip.js"
     - "node_modules/bootstrap/dist/js/umd/popover.js"
-
     # Paths to your own project code are here
     - "src/assets/js/!(app).js"
     - "src/assets/js/app.js"
+  # Paths to Font files.
+  font:
+    # font awesome
+    - "node_modules/font-awesome/fonts/fontawesome-webfont.eot"
+    - "node_modules/font-awesome/fonts/fontawesome-webfont.woff2"
+    - "node_modules/font-awesome/fonts/fontawesome-webfont.woff"
+    - "node_modules/font-awesome/fonts/fontawesome-webfont.ttf"
