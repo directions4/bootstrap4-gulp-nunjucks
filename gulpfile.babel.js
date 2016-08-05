@@ -24,7 +24,6 @@ const PRODUCTION = !!(yargs.argv.production);
 const {
   COMPATIBILITY,
   PORT,
-  UNCSS_OPTIONS,
   PATHS
 } = loadConfig();
 
@@ -95,7 +94,6 @@ function sass() {
         browsers: COMPATIBILITY
       }))
     .pipe(postcss(postproc))
-    .pipe($.if(PRODUCTION, $.uncss(UNCSS_OPTIONS)))
     .pipe($.if(PRODUCTION, $.cssnano()))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATHS.dist + '/css'))
