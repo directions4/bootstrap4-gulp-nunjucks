@@ -1,6 +1,6 @@
 {
   "name": "bootstrap4-gulp-nunjucks",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Template for Bootstrap 4.",
   "main": "gulpfile.js",
   "scripts": {
