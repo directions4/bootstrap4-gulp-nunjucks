@@ -1,0 +1,26 @@
+{% from '../macros/_global-macro.njk' import asset,path %}
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{sitename}}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{root}}css/app.css">
+  </head>
+  <body>
+    {% block header %}
+      {% include '_header.njk' %}
+    {% endblock header %}
+    <main role="main">
+      {% block content %}{% endblock content %}
+    </main>
+    {% block footer %}
+      {% include '_footer.njk' %}
+    {% endblock footer %}
+
+    {% block javascripts %}
+      <script src="{{roo}}js/bootstrap.bundle.min.js"></script>
+    {% endblock %}
+  </body>
+</html>
